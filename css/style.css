@@ -78,9 +78,10 @@ h1, h2, h3, h4, h5, h6 {
 body {
   height: 100%;
   line-height: 1;
-  font-size: 16px;
-  color: #000;
+  font-size: 14px;
+  color: #252B42;
   font-family: Montserrat;
+  font-weight: 500;
 }
 
 .wrapper {
@@ -91,4 +92,32 @@ body {
 ._container {
   max-width: 1046px;
   margin: 0 auto;
-}/*# sourceMappingURL=style.css.map */
+}
+
+/*-----------------------------------------------------------*/
+.header {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 40;
+}
+
+.header__container {
+  display: flex;
+  min-height: 104px;
+  align-items: center;
+}
+.header__container .header__logo {
+  font-size: 24px;
+  font-weight: 700;
+  color: inherit;
+}
+.header__container .header__menu {
+  margin: 0 0 0 133px;
+}
+.header__container .menu__list .menu__item .menu__link {
+  color: #737373;
+}
+
+/*-----------------------------------------------------------*//*# sourceMappingURL=style.css.map */

@@ -1,11 +1,17 @@
 @import "nullstyle.scss";
 
+
+$gray:#737373;
+
+
 body{
     height: 100%;
     line-height: 1;
-    font-size: 16px;
-    color: #000;
+    font-size: 14px;
+    color: #252B42;
     font-family: Montserrat;
+    font-weight: 500;
+    
 }
 
 .wrapper{
@@ -18,23 +24,44 @@ body{
     margin: 0 auto;
 }
 
-// -------------------------------------------------------------------------------------------------------------------------------------//
+
+/*-----------------------------------------------------------*/
 
 .header {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 40;
 }
 .header__container {
-}
+    display: flex;
+    min-height: 104px;
+    align-items: center;
+    .header__logo {
 
-.header__logo {
-}
-.header__menu {
-}
-.menu {
-}
-.menu__list {
-    .menu__item {
-        .menu__link {
+        font-size: 24px;
+        font-weight: 700;
+        color:inherit;  //перенимает цвет текста для ссылок
+        
+
+    }
+    .header__menu {
+        margin: 0 0 0 133px;
+    }
+    .menu {
+    }
+    .menu__list {
+        .menu__item {
+            .menu__link {
+                color:$gray;
+            }
         }
     }
 }
+
+
+
+
+/*-----------------------------------------------------------*/
 
