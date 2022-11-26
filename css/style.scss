@@ -17,6 +17,8 @@ body{
 .wrapper{
     min-height: 100%;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
 ._container{
@@ -26,8 +28,20 @@ body{
     padding: 0 15px;
 }
 
+._ibg{
+    position: relative;
 
-/*-----------------------------------------------------------*/
+}
+._ibg img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    object-fit: cover;
+} 
+
+/*---------шапка-------------------------------------------*/
 
 .header {
     position: absolute;
@@ -40,13 +54,15 @@ body{
     display: flex;
     min-height: 104px;
     align-items: center;
-    .header__logo {
 
+    @media (max-width:479px) {
+        min-height: 70px; 
+    }
+
+    .header__logo {
         font-size: 24px;
         font-weight: 700;
         color:inherit;  //перенимает цвет текста для ссылок
-        
-
     }
     .header__menu {
         margin: 0 0 0 133px;
@@ -57,6 +73,10 @@ body{
         //mobile
         @media (max-width:767px) {
             margin: 0 0 0 40px;
+        }
+        //mobile
+        @media (max-width:479px) {
+            margin: 0 0 0 20px;
         }
     }
     .menu {
@@ -70,6 +90,9 @@ body{
                 color:$gray;
                 font-weight: 600;
                 line-height: calc(24/14*100%);
+                @media (max-width:479px) {
+                    font-size: 18px;
+                }
             }
         }
         // все кроме последнего
@@ -82,5 +105,128 @@ body{
 
 
 
-/*-----------------------------------------------------------*/
+/*---------page-----------------------------------------------*/
+
+
+.page {
+
+    flex: 1 1 auto;
+
+    &__main-block {
+    }
+}
+/*---------main-------------------------------------------*/
+
+.main-block {
+    position: relative;
+
+    // .main-block__body
+
+    &__body {
+        padding: 184px 0 191px 0;
+        position: relative;
+        z-index: 2;
+        max-width: 400px;
+        @media (max-width:992px) {
+            padding: 120px 0 191px 0;
+        }
+    }
+    // обращаемся к блокам 1ого уровня кроме посл
+    &__body > *:not(:last-child){
+        margin: 0 0 35px 0;
+    }
+
+    // .main-block__title
+
+    &__title {
+        font-size: 58px;
+        line-height: 137%;
+        font-weight: 800;
+        letter-spacing: 0.2px;
+        @media (max-width:479px) {
+            font-size: 42px;
+        }
+    }
+
+    // .main-block__text
+
+    &__text {
+        color: $gray;
+        font-size: 20px;
+        line-height: 150%;
+        @media (max-width:992px) {
+            color: #413f3f;
+        }
+    }
+
+
+    &__buttons {
+        display: flex;
+        flex-wrap: wrap;
+        margin: -10px 0;
+        
+        
+    }
+    
+    // верстка кнопки 
+
+    &__button {
+        border-radius: 37px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 48px;
+        padding: 5px 36px;
+        letter-spacing: 0.2px;
+        font-weight: 700;
+        line-height: 150%;
+        text-align: center;
+        margin: 10px 0;
+        //первая кнопка
+        @media (max-width:479px) {
+            flex: 1 1 100%;
+        }
+        &_orange{
+            background: #FF7B47;
+            color: #fff;
+        }
+        //вторая кнопка
+        &_border {
+            color: #0D5C63;
+            border: 1px solid #0D5C63;
+        }
+    }
+    // отступ 10px после 473 px и выше
+    &__button:not(:last-child){
+        @media (min-width:479px) {
+            margin-right: 10px;
+        }
+        
+    }
+
+    &__image{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        //при сужении текст и картинка одного цвета, картинку делаем прозрачнее
+        @media (max-width:992px) {
+            //лайвхак
+            opacity: 0.4;
+        }
+    }
+    &__image img{
+        @media (max-width:1300px) {
+            object-position: right;
+        }
+    }
+
+}
+
+
+/*---------подвал-------------------------------------------*/
+.footer{
+
+}
 
