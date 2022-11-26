@@ -22,6 +22,8 @@ body{
 ._container{
     max-width: 1046px;
     margin: 0 auto;
+    box-sizing: content-box;
+    padding: 0 15px;
 }
 
 
@@ -48,14 +50,31 @@ body{
     }
     .header__menu {
         margin: 0 0 0 133px;
+        // planshet
+        @media (max-width:992px) {
+            margin: 0 0 0 80px;
+        }
+        //mobile
+        @media (max-width:767px) {
+            margin: 0 0 0 40px;
+        }
     }
     .menu {
+        padding: 5px 0;
     }
     .menu__list {
+        display: flex;
+        flex-wrap: wrap;
         .menu__item {
             .menu__link {
                 color:$gray;
+                font-weight: 600;
+                line-height: calc(24/14*100%);
             }
+        }
+        // все кроме последнего
+        .menu__item:not(:last-child){
+            margin: 0 21px 0 0;
         }
     }
 }
