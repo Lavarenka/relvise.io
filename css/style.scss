@@ -2,6 +2,7 @@
 
 
 $gray:#737373;
+$border:1px solid black;
 
 
 body{
@@ -115,6 +116,9 @@ body{
     &__main-block {
     }
     &__services {
+        position: relative;
+        z-index: 2;
+        margin: -111px 0 0 0;
     }
 }
 /*---------main-------------------------------------------*/
@@ -230,31 +234,54 @@ body{
 
 .services {
 
-    // .services__container
 
     &__container {
     }
 
-    // .services__body
 
     &__body {
-        display: flex;
-        margin: 0 -15px;
+        @media (min-width:670px) {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 -15px;
+        }
     }
 
-    // .services__column
 
     &__column {
-        padding: 0 15px;
+        
         flex: 0 1 33.333%;
+        margin: 0 0 30px 0;
+        @media (min-width:670px) {
+            padding: 0 15px;
+        }
+        @media (max-width:992px) {
+            flex: 0 1 50%; 
+        }
+
+    }
+    //посл блок на всю ширину
+    &__column:last-child{
+        @media (max-width:992px) {
+            flex: 1 1 100%; 
+        }
+    }
+    &__column:not(:last-child){
+        @media (max-width:992px) {
+            margin: 0 0 30px 0;
+        }
+        
     }
 
-    // .services__item
 
     &__item {
         box-shadow: 0px 13px 19px rgba(0, 0, 0, 0.07);
         background-color: #fff;
         padding: 35px;
+        height: 100%;
+        @media (max-width:479px) {
+            padding: 25px;
+        }
     }
 }
 
@@ -270,6 +297,7 @@ body{
         font-weight: 700;
         font-size: 24px;
         line-height: 133%;
+        letter-spacing: 0.1px;
     }
 
 
@@ -279,9 +307,25 @@ body{
     }
 }
 
+.item-service >*:not(:last-child){
+    margin: 0 0 10px 0;
+}
+
+.item-service_green{
+    background-color: #0D5C63;
+}
+
+.item-service_green .item-service__title{
+    color: #fff;
+}
+
+.item-service_green .item-service__text{
+    color: #fff;
+}
+
+
 
 /*---------подвал-------------------------------------------*/
 .footer{
 
 }
-
