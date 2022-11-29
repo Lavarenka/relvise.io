@@ -12,6 +12,7 @@ body{
     color: #252B42;
     font-family: Montserrat;
     font-weight: 500;
+    background: #FAFAFA;
     
 }
 
@@ -128,18 +129,24 @@ body{
 .header-block {
 
     text-align: center;
+    letter-spacing: 0.2px;
 
     &__title {
         font-size: 40px;
+        line-height: 142%;
         font-weight: 700;
-        letter-spacing: 0.2px;
     }
-
-    // .header-block__sub-title
+    &__title:not(:last-child){
+        margin: 0 0 10px 0;
+    }
+    
 
     &__sub-title {
+        color: $gray;
+        line-height: 142%;
     }
 }
+
 /*---------main-------------------------------------------*/
 
 .main-block {
@@ -255,7 +262,7 @@ body{
 /*---------services-------------------------------------------*/
 
 .services {
-
+    
 
     &__container {
     }
@@ -348,45 +355,55 @@ body{
 /*---------adventages-------------------------------------------*/
 
 .adventages {
-
-    // .adventages__container
+    
+    padding: 80px 0;
 
     &__container {
+        
     }
 
-    // .adventages__header
 
     &__header {
+        margin: 0 0 50px 0;
     }
-
-    // .adventages__body
 
     &__body {
+        display: flex;
+        margin: 0 -15px;
     }
-
-    // .adventages__column
 
     &__column {
+        padding: 0 15px;
+        flex: 0 1 25%;
     }
 
-    // .adventages__item
 
     &__item {
+        background-color: #fff;
+        padding: 30px;
+        text-align: center;
+        font-weight: 700;
     }
-
-    // .adventages__icon
+    &__item>*:not(:last-child){
+        margin-bottom: 10px;
+    }
 
     &__icon {
     }
 
-    // .adventages__value
 
     &__value {
+        font-size: 40px;
+        line-height: 120%;
     }
 
-    // .adventages__text
 
     &__text {
+        color: $gray;
+  
+        line-height: 150%;
+        letter-spacing: 0.1px;
+        font-size: 16px;
     }
 }
 
