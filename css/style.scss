@@ -123,6 +123,9 @@ body{
     }
     &__adventages {
     }
+    &__practice {
+    }
+
 }
 /*---------header-block--------------------------------------*/
 
@@ -442,6 +445,79 @@ body{
 }
 
 /*---------Practice-------------------------------------------*/
+    
+.practice {
+    padding: 125px 0 80px 0;
+
+    &__header {
+        margin: 0 0 45px 0;
+    }
+
+    // .practice__body
+
+    &__body {
+        margin: 0 -20px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    // .practice__column
+
+    &__column {
+        
+        padding: 0 20px;
+        flex: 0 1 25%;
+        
+    }
+
+    // .practice__item
+
+    &__item {
+        
+    }
+}
+
+.item-practice {
+    background-color: #fff;
+
+    &__content{
+        padding: 30px;
+        border: $border;
+    }
+
+    &__link {
+        color: inherit; //убирает ссылочный цвет
+        display: inline-block;
+    }
+    &__link:hover{
+        text-decoration: underline;
+    }
+    &__link:not(:last-child){
+        margin: 0 0 15px 0;
+        border: $border;
+    }
+
+    &__title {
+        font-weight: 700;
+        letter-spacing: 0.1px;
+        font-size: 16px;
+        line-height: 150%;
+    }
+
+
+    &__text {
+        color: $gray;
+        line-height: 142%;
+    }
+
+    // 138*230
+    //138/230*100 = 60%
+
+    &__img {
+        display: block;
+        padding: 0 0 60% 0;
+    }
+}
 
 
 
