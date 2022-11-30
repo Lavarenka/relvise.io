@@ -125,6 +125,8 @@ body{
     }
     &__practice {
     }
+    &__whoweare {
+    }
 
 }
 /*---------header-block--------------------------------------*/
@@ -539,6 +541,99 @@ body{
     }
 }
 
+/*---------whoweare-------------------------------------------*/
+
+.whoweare {
+    padding: 80px 0 130px 0;
+
+    &__container {
+    }
+
+    &__header {
+        margin: 0 0 100px 0;
+    }
+
+
+    &__body {
+        display: flex;
+    }
+
+
+    &__video {
+        flex: 0 0 57%;
+        position: relative;
+        padding: 0 0 42.25% 0;
+    }
+    &__video iframe{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        object-fit: cover;
+    }
+
+    &__content {
+        flex: 1 1 auto;
+        padding: 0 0 0 121px;
+    }
+
+
+    &__title {
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 142%;
+        letter-spacing: 0.2px;
+    }
+    &__title:not(:last-child){
+        margin: 0 0 10px 0;
+    } 
+
+    &__text {
+        letter-spacing: 0.2px;
+        color: $gray;
+        //20/14
+        //line-height/Size*100
+        line-height: 142%;
+    }
+    &__top:not(:last-child){
+        margin: 0 0 50px 0;
+    } 
+
+
+    &__items {
+       
+    }
+
+    // .whoweare__item
+
+    &__item {
+    }
+}
+
+
+.item-whoweare {
+
+    // .item-whoweare__icon
+
+    &__icon {
+    }
+
+    // .item-whoweare__body
+
+    &__body {
+    }
+
+    // .item-whoweare__title
+
+    &__title {
+    }
+
+    // .item-whoweare__text
+
+    &__text {
+    }
+}
 
 
 /*---------подвал-------------------------------------------*/
