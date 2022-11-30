@@ -482,7 +482,6 @@ body{
 
     &__content{
         padding: 30px;
-        border: $border;
     }
 
     &__link {
@@ -494,7 +493,6 @@ body{
     }
     &__link:not(:last-child){
         margin: 0 0 15px 0;
-        border: $border;
     }
 
     &__title {
