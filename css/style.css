@@ -533,16 +533,48 @@ body {
 .whoweare {
   padding: 80px 0 130px 0;
 }
+@media (max-width: 950px) {
+  .whoweare {
+    padding: 50px 0 50px 0;
+  }
+}
+@media (max-width: 767px) {
+  .whoweare {
+    padding: 20px 0 50px 0;
+  }
+}
 .whoweare__header {
   margin: 0 0 100px 0;
 }
+@media (max-width: 950px) {
+  .whoweare__header {
+    margin: 0 0 30px 0;
+  }
+}
 .whoweare__body {
   display: flex;
+  align-items: flex-start;
+}
+@media (max-width: 950px) {
+  .whoweare__body {
+    flex-direction: column-reverse;
+    align-items: stretch;
+  }
 }
 .whoweare__video {
   flex: 0 0 57%;
   position: relative;
   padding: 0 0 42.25% 0;
+}
+@media (max-width: 950px) {
+  .whoweare__video {
+    padding: 0 0 56.25% 0;
+  }
+}
+@media (max-width: 950px) {
+  .whoweare__video:not(:last-child) {
+    margin: 50px 0 0 0;
+  }
 }
 .whoweare__video iframe {
   position: absolute;
@@ -555,13 +587,28 @@ body {
 }
 .whoweare__content {
   flex: 1 1 auto;
-  padding: 0 0 0 121px;
+  padding: 20 0 0 121px;
+}
+@media (max-width: 1080px) {
+  .whoweare__content {
+    padding: 0 0 0 50px;
+  }
+}
+@media (max-width: 950px) {
+  .whoweare__content {
+    padding: 0;
+  }
 }
 .whoweare__title {
   font-weight: 700;
   font-size: 40px;
   line-height: 142%;
   letter-spacing: 0.2px;
+}
+@media (max-width: 950px) {
+  .whoweare__title {
+    font-size: 24px;
+  }
 }
 .whoweare__title:not(:last-child) {
   margin: 0 0 10px 0;
@@ -574,4 +621,35 @@ body {
 .whoweare__top:not(:last-child) {
   margin: 0 0 50px 0;
 }
+.whoweare__item:not(:last-child) {
+  margin: 0 0 30px 0;
+}
+
+.item-whoweare {
+  display: flex;
+}
+.item-whoweare__icon {
+  flex: 0 0 32px;
+}
+.item-whoweare__body {
+  flex: 1 1 auto;
+  padding: 0 0 0 20px;
+}
+.item-whoweare__title {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 150%;
+}
+.item-whoweare__title:not(:last-child) {
+  margin: 0 0 5px 0;
+}
+.item-whoweare__text {
+  color: #737373;
+  line-height: 142%;
+  width: 225px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 /*---------подвал-------------------------------------------*//*# sourceMappingURL=style.css.map */
