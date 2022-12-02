@@ -127,6 +127,11 @@ body{
     }
     &__whoweare {
     }
+    &__clients:not(:last-child) {
+        margin: 0 0 10px 0;
+    }
+    &__subscribe {
+    }
 
 }
 /*---------header-block--------------------------------------*/
@@ -544,6 +549,7 @@ body{
 /*---------whoweare-------------------------------------------*/
 
 .whoweare {
+    border: #fff;
     padding: 80px 0 130px 0;
     @media (max-width:950px) {
         padding: 50px 0 50px 0; 
@@ -585,6 +591,9 @@ body{
     &__video:not(:last-child){
         @media (max-width:950px) {
             margin: 50px 0 0 0;  
+        }
+        @media (max-width:767px) {
+            margin: 30px 0 0 0;  
         }
         
     }
@@ -632,6 +641,9 @@ body{
     }
     &__top:not(:last-child){
         margin: 0 0 50px 0;
+        @media (max-width:767px) {
+            margin: 0 0 30px 0; 
+        }
     } 
 
 
@@ -689,6 +701,126 @@ body{
     }
 }
 
+/*-------clients------------------------------------------*/
+
+.clients {
+    padding: 50px 0;
+    // .clients__container
+    @media (max-width:767px) {
+        padding: 30px 0;
+
+    }
+
+    &__container {
+    }
+
+    // .clients__items
+
+    &__items {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+
+    // .clients__item
+
+    &__item {
+        padding: 8 15px;
+        flex: 0 1 16.6667%;
+        text-align: center;
+        min-width: 140px;
+    }
+    &__item img{
+        max-width: 100%;
+    }
+}
+
+/*------------Subscribe-------------------------------------*/
+
+.subscribe {
+    position: relative;
+    padding-bottom: 20px;
+
+    // .subscribe__container
+
+    &__container {
+    }
+
+    // .subscribe__body
+
+    &__body {
+        position: relative;
+        z-index: 10;
+        margin: 0 30px;
+        display: flex;
+        justify-content: space-between;
+        padding: 30px 50px;
+        align-items: center;
+        background-color: #17213C;
+        border-radius: 2px;
+    }
+
+    // .subscribe__title
+
+    &__title {
+        max-width: 266px;
+        flex: 0 1 50%;
+        color: #fff;
+        font-weight: 700;
+        letter-spacing: 0.1px;
+        font-size: 24px;
+        line-height: 133%;
+    }
+
+    // .subscribe__form
+
+    &__form {
+        flex: 0 1 50%;
+        display: flex;
+        align-items: center;
+    }
+
+    // .subscribe__input
+
+    &__input {
+        flex: 1 1 auto ;
+        min-height: 58px;
+        padding: 0 20px;
+        background: #F9F9F9;
+        border: 1px solid #E6E6E6;
+        border-radius: 5px 0 0 5px;
+        color: $gray;
+        border-right: 0;
+    }
+    &__input:focus{
+        color: #000;
+    }
+
+    // .subscribe__button
+
+    &__button {
+        background: #FF7B47;
+        border: 1px solid #E6E6E6;
+        border-radius: 0px 5px 5px 0px;
+        display: flex;
+        min-height: 58px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: #fff;
+        padding: 0 22px;
+    }
+}
+.subscribe::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 77px;
+    background: #252B42;
+}
 
 /*---------подвал-------------------------------------------*/
 .footer{
