@@ -752,25 +752,42 @@ body{
     &__body {
         position: relative;
         z-index: 10;
-        margin: 0 30px;
-        display: flex;
-        justify-content: space-between;
+        
+        
+        
         padding: 30px 50px;
         align-items: center;
         background-color: #17213C;
         border-radius: 2px;
+        @media (min-width:1071px) {
+            margin: 0 30px;
+        }
+        @media (min-width:810px) {
+            display: flex;
+            justify-content: space-between;
+        }
+        @media (max-width:910px) {
+            margin:0 -15px;
+            padding: 20px 15px;
+        }
     }
 
     // .subscribe__title
 
     &__title {
-        max-width: 266px;
+        
         flex: 0 1 50%;
         color: #fff;
         font-weight: 700;
         letter-spacing: 0.1px;
         font-size: 24px;
         line-height: 133%;
+        @media (max-width:910px) {
+            margin: 0 0 20px 0;
+        }
+        @media (min-width:810px) {
+            max-width: 266px;
+        }
     }
 
     // .subscribe__form
@@ -784,6 +801,7 @@ body{
     // .subscribe__input
 
     &__input {
+        width: 100%;
         flex: 1 1 auto ;
         min-height: 58px;
         padding: 0 20px;
@@ -810,6 +828,9 @@ body{
         text-align: center;
         color: #fff;
         padding: 0 22px;
+        @media (max-width:810px) {
+            padding: 0 15px;
+        }
     }
 }
 .subscribe::before{

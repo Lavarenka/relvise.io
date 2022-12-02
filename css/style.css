@@ -699,16 +699,29 @@ body {
 .subscribe__body {
   position: relative;
   z-index: 10;
-  margin: 0 30px;
-  display: flex;
-  justify-content: space-between;
   padding: 30px 50px;
   align-items: center;
   background-color: #17213C;
   border-radius: 2px;
 }
+@media (min-width: 1071px) {
+  .subscribe__body {
+    margin: 0 30px;
+  }
+}
+@media (min-width: 810px) {
+  .subscribe__body {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+@media (max-width: 910px) {
+  .subscribe__body {
+    margin: 0 -15px;
+    padding: 20px 15px;
+  }
+}
 .subscribe__title {
-  max-width: 266px;
   flex: 0 1 50%;
   color: #fff;
   font-weight: 700;
@@ -716,12 +729,23 @@ body {
   font-size: 24px;
   line-height: 133%;
 }
+@media (max-width: 910px) {
+  .subscribe__title {
+    margin: 0 0 20px 0;
+  }
+}
+@media (min-width: 810px) {
+  .subscribe__title {
+    max-width: 266px;
+  }
+}
 .subscribe__form {
   flex: 0 1 50%;
   display: flex;
   align-items: center;
 }
 .subscribe__input {
+  width: 100%;
   flex: 1 1 auto;
   min-height: 58px;
   padding: 0 20px;
@@ -745,6 +769,11 @@ body {
   text-align: center;
   color: #fff;
   padding: 0 22px;
+}
+@media (max-width: 810px) {
+  .subscribe__button {
+    padding: 0 15px;
+  }
 }
 
 .subscribe::before {
