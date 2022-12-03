@@ -134,6 +134,8 @@ body{
     }
     &__getintouch {
     }
+    &__contact {
+    }
 
 }
 /*---------header-block--------------------------------------*/
@@ -853,6 +855,9 @@ body{
 .getintouch {
     padding: 80px 0 135px 0;
     background-color:#F3F3F3;
+    @media (max-width:992px) {
+        padding: 50px 0;
+    }
 
     &__container {
     }
@@ -861,13 +866,24 @@ body{
 
     &__header {
         margin-bottom: 80px; 
+        @media (max-width:992px) {
+            margin-bottom: 50px; 
+        }
+        @media (max-width:767px) {
+            margin-bottom: 30px; 
+        }
     }
 
     // .getintouch__items
 
     &__items {
-        display: flex;
-        align-items: center;
+        margin: 0 -15px;
+
+        @media (min-width:992px) {
+            display: flex;
+            align-items: center;
+            margin: 0;
+        }
     }
 
     // .getintouch__item
@@ -890,10 +906,18 @@ body{
         background: #252B42;
         color: #fff;
         padding: 80px 15px;
+        @media (max-width:992px) {
+            padding: 50px 15px;
+        }
     }
     &__active .item-getintouch__button{
         border: 1px solid #FFFFFF;
         color: #fff;
+    }
+    &__active .item-getintouch__button:hover{
+        border: 1px solid #252B42;
+        color: #252B42;
+        background: #ffffff;
     }
 
 
@@ -958,9 +982,186 @@ body{
     margin: 0 0 15px 0;
 }
 
+/*------------contact------------------------------------------*/
+
+.contact {
+
+    background-color: #fff;
+    padding: 42px 0;
+
+
+    &__container {
+    }
+
+    // .contact__body
+
+    &__body {
+
+        @media (min-width:767px) {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+
+    // .contact__content
+
+    &__content {
+        padding: 0 0 20px 0;
+
+        @media (min-width:767px) {
+            padding: 0 20px 0 0;
+        }
+    }
+
+    // .contact__title
+
+    &__title {
+        font-weight: 700;
+        color: #252B42;
+        letter-spacing: 0.1px;
+        font-size: 24px;
+        //line-height: 32px;
+        //32 / 24 * 100
+        line-height: 133%;
+    }
+
+    &__title:not(:last-child){
+        margin: 0 0 10px 0;
+    }
+
+    // .contact__text
+
+    &__text {
+        color: $gray;
+        line-height: 142%;
+    }
+
+    // .contact__button
+
+    &__button {
+       display: flex;
+       min-height: 58px;
+       background: #FF7B47;
+       border-radius: 5px;
+       padding: 15px 40px;
+       align-items: center;
+       justify-content: center;
+       text-align: center;
+       color: #fff;
+       transition: all 0.3s ease 0s ;
+
+    }
+    &__button:hover{
+        background-color: #72331a;
+   }
+
+
+}
+
 
 
 /*---------подвал-------------------------------------------*/
-.footer{
+.footer {
 
+    // .footer__top
+
+    &__top {
+        background-color: #17213C;
+        color: #fff;
+    }
+
+    // .footer__main
+
+    &__main {
+        display: flex;
+        
+    }
+
+    // .footer__column
+
+    &__column {
+    }
+
+    // .footer__label
+
+    &__label {
+    }
+
+    // .footer__menu
+
+    &__menu {
+    }
+
+    // .footer__contacts
+
+    &__contacts {
+    }
+
+    // .footer__bottom
+
+    &__bottom {
+    }
+
+    // .footer__container
+
+    &__container {
+    }
+
+    // .footer__copi
+
+    &__copi {
+    }
+
+    // .footer__social
+
+    &__social {
+    }
+}
+
+.menu-footer {
+
+    // .menu-footer__list
+
+    &__list {
+    }
+
+    // .menu-footer__item
+
+    &__item {
+    }
+
+    // .menu-footer__link
+
+    &__link {
+    }
+}
+.contacts-footer {
+
+    // .contacts-footer__item
+
+    &__item {
+    }
+
+    // .contacts-footer__item-phone
+
+    &__item-phone {
+    }
+
+    // .contacts-footer__item-map
+
+    &__item-map {
+    }
+
+    // .contacts-footer__item-email
+
+    &__item-email {
+    }
+}
+.social {
+
+    // .social__item
+
+    &__item {
+    }
 }

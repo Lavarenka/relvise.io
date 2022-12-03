@@ -796,12 +796,33 @@ body {
   padding: 80px 0 135px 0;
   background-color: #F3F3F3;
 }
+@media (max-width: 992px) {
+  .getintouch {
+    padding: 50px 0;
+  }
+}
 .getintouch__header {
   margin-bottom: 80px;
 }
+@media (max-width: 992px) {
+  .getintouch__header {
+    margin-bottom: 50px;
+  }
+}
+@media (max-width: 767px) {
+  .getintouch__header {
+    margin-bottom: 30px;
+  }
+}
 .getintouch__items {
-  display: flex;
-  align-items: center;
+  margin: 0 -15px;
+}
+@media (min-width: 992px) {
+  .getintouch__items {
+    display: flex;
+    align-items: center;
+    margin: 0;
+  }
 }
 .getintouch__item {
   flex: 0 1 33.333%;
@@ -820,9 +841,19 @@ body {
   color: #fff;
   padding: 80px 15px;
 }
+@media (max-width: 992px) {
+  .item-getintouch__active {
+    padding: 50px 15px;
+  }
+}
 .item-getintouch__active .item-getintouch__button {
   border: 1px solid #FFFFFF;
   color: #fff;
+}
+.item-getintouch__active .item-getintouch__button:hover {
+  border: 1px solid #252B42;
+  color: #252B42;
+  background: #ffffff;
 }
 .item-getintouch__emails {
   display: flex;
@@ -866,4 +897,61 @@ body {
   margin: 0 0 15px 0;
 }
 
-/*---------подвал-------------------------------------------*//*# sourceMappingURL=style.css.map */
+/*------------contact------------------------------------------*/
+.contact {
+  background-color: #fff;
+  padding: 42px 0;
+}
+@media (min-width: 767px) {
+  .contact__body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+.contact__content {
+  padding: 0 0 20px 0;
+}
+@media (min-width: 767px) {
+  .contact__content {
+    padding: 0 20px 0 0;
+  }
+}
+.contact__title {
+  font-weight: 700;
+  color: #252B42;
+  letter-spacing: 0.1px;
+  font-size: 24px;
+  line-height: 133%;
+}
+.contact__title:not(:last-child) {
+  margin: 0 0 10px 0;
+}
+.contact__text {
+  color: #737373;
+  line-height: 142%;
+}
+.contact__button {
+  display: flex;
+  min-height: 58px;
+  background: #FF7B47;
+  border-radius: 5px;
+  padding: 15px 40px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  transition: all 0.3s ease 0s;
+}
+.contact__button:hover {
+  background-color: #72331a;
+}
+
+/*---------подвал-------------------------------------------*/
+.footer__top {
+  background-color: #17213C;
+  color: #fff;
+}
+.footer__main {
+  display: flex;
+}/*# sourceMappingURL=style.css.map */
