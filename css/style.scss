@@ -96,6 +96,9 @@ body{
                     font-size: 18px;
                 }
             }
+            .menu__link:hover{
+                text-decoration: underline;
+            }
         }
         // все кроме последнего
         .menu__item:not(:last-child){
@@ -238,6 +241,7 @@ body{
         line-height: 150%;
         text-align: center;
         margin: 10px 0;
+        transition: all 0.3s ease 0s;
         //первая кнопка
         @media (max-width:479px) {
             flex: 1 1 100%;
@@ -251,7 +255,19 @@ body{
             color: #0D5C63;
             border: 1px solid #0D5C63;
         }
+
+        &_orange:hover{
+            background-color: #FFF;
+            color: #FF7B47;
+        }
+        //вторая кнопка
+        &_border:hover {
+            background-color: #0D5C63;
+            color: #fff;
+        }
     }
+
+
     // отступ 10px после 473 px и выше
     &__button:not(:last-child){
         @media (min-width:479px) {
@@ -835,9 +851,14 @@ body{
         text-align: center;
         color: #fff;
         padding: 0 22px;
+        transition: all 0.3s ease 0s;
         @media (max-width:810px) {
             padding: 0 15px;
         }
+    }
+    &__button:hover{
+        background-color: #77361c;
+
     }
 }
 .subscribe::before{
@@ -1068,12 +1089,12 @@ body{
 
     &__top {
         background-color: #17213C;
-        padding: 50px 0;
+        padding: 35px 0;
     }
 
     &__row{
         display: flex;
-        
+        flex-wrap: wrap;
         margin: 0 -15px;
     }
     // .footer__main
@@ -1086,9 +1107,28 @@ body{
     // .footer__column
 
     &__column {
-        flex: 0 1 20%;
-        padding: 0 15px;
+        flex: 0 1 16.6667%;
+        padding: 15 15px;
+        min-width: 160px;
+        @media (max-width:1042px) {
+            flex: 0 1 25%; 
+        }
+
+        @media (max-width:700px) {
+            flex: 0 1 50%; 
+        }
+       
+    }
+    &__column:last-child {
+        flex: 0 1 33.334%;
+        @media (max-width:1042px) {
+            flex: 1 1 100%; 
+        }
+
+
+       
         
+       
     }
 
     // .footer__label
@@ -1114,23 +1154,37 @@ body{
     // .footer__bottom
 
     &__bottom {
-      
+        padding: 25px 0;
     }
 
     // .footer__container
 
     &__container {
-        
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @media (max-width:767px) {
+            flex-direction: column;
+        }
     }
 
     // .footer__copi
 
-    &__copi {
+    &__copy {
+        color: $gray;
+        line-height: 171%;
+        @media (max-width:767px) {
+            margin: 0 0 15px 0;
+            text-align: center;
+        }
     }
 
     // .footer__social
 
     &__social {
+        display: flex;
+        align-items: center;
     }
 }
 
@@ -1145,6 +1199,7 @@ body{
 
     &__item {
 
+
     }
     &__item:not(:last-child) {
         margin: 0 0 10px 0;
@@ -1155,7 +1210,12 @@ body{
     &__link {
         color: #fff;
         letter-spacing: 0.2px;
+        line-height: 171%;
+        display: inline-block;
 
+    }
+    &__link:hover{
+        text-decoration: underline;
     }
 }
 .contacts-footer {
@@ -1168,6 +1228,11 @@ body{
         display: flex;
         align-items: center;
         min-height: 30px;
+        color: #fff;
+        line-height: 142%;
+    }
+    &__item:hover{
+        text-decoration: underline;
     }
     &__item:not(:last-child) {
         margin: 0 0 12px 0;
@@ -1176,17 +1241,19 @@ body{
     // .contacts-footer__item-phone
 
     &__item-phone {
-        background: url("../img/footer/01.svg") left no-repeat;
+        background: url("../img/footer/01.svg") 0 0 no-repeat;
     }
 
     // .contacts-footer__item-map
 
     &__item-map {
+        background: url("../img/footer/02.svg") 0 0 no-repeat;
     }
 
     // .contacts-footer__item-email
 
     &__item-email {
+        background: url("../img/footer/03.svg") 0 0 no-repeat;
     }
 }
 .social {
@@ -1195,4 +1262,8 @@ body{
 
     &__item {
     }
+    &__item:not(:last-child) {
+        margin: 0 20px 0 0;
+    }
+
 }
