@@ -950,8 +950,44 @@ body {
 /*---------подвал-------------------------------------------*/
 .footer__top {
   background-color: #17213C;
-  color: #fff;
+  padding: 50px 0;
 }
-.footer__main {
+.footer__row {
   display: flex;
+  margin: 0 -15px;
+}
+.footer__column {
+  flex: 0 1 20%;
+  padding: 0 15px;
+}
+.footer__label {
+  color: #fff;
+  font-weight: 700;
+  font-style: 16px;
+  line-height: 150%;
+  margin: 0 0 20px 0;
+}
+.menu-footer__item:not(:last-child) {
+  margin: 0 0 10px 0;
+}
+.menu-footer__link {
+  color: #fff;
+  letter-spacing: 0.2px;
+}
+
+.contacts-footer {
+  display: flex;
+  flex-direction: column;
+}
+.contacts-footer__item {
+  padding: 0 0 0 34px;
+  display: flex;
+  align-items: center;
+  min-height: 30px;
+}
+.contacts-footer__item:not(:last-child) {
+  margin: 0 0 12px 0;
+}
+.contacts-footer__item-phone {
+  background: url("../img/footer/01.svg") left no-repeat;
 }/*# sourceMappingURL=style.css.map */
