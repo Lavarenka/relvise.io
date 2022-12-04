@@ -51,22 +51,23 @@ body{
     left: 0;
     top: 0;
     z-index: 40;
-}
-.header__container {
-    display: flex;
-    min-height: 104px;
-    align-items: center;
 
-    @media (max-width:479px) {
-        min-height: 70px; 
+    &__container {
+        display: flex;
+        min-height: 104px;
+        align-items: center;
+    
+        @media (max-width:479px) {
+            min-height: 70px; 
+        }
     }
-
-    .header__logo {
+    
+    &__logo {
         font-size: 24px;
         font-weight: 700;
         color:inherit;  //перенимает цвет текста для ссылок
     }
-    .header__menu {
+    &__menu {
         margin: 0 0 0 133px;
         // planshet
         @media (max-width:992px) {
@@ -81,40 +82,40 @@ body{
             margin: 0 0 0 20px;
         }
     }
-    .menu {
-        padding: 5px 0;
-    }
-    .menu__list {
-        display: flex;
-        flex-wrap: wrap;
-        .menu__item {
-            .menu__link {
-                color:$gray;
-                font-weight: 600;
-                line-height: calc(24/14*100%);
-                @media (max-width:479px) {
-                    font-size: 18px;
-                }
-            }
-            .menu__link:hover{
-                text-decoration: underline;
-            }
-        }
-        // все кроме последнего
-        .menu__item:not(:last-child){
-            margin: 0 21px 0 0;
-        }
-    }
+    
 }
 
 
+.menu {
+    padding: 5px 0;
 
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &__item {
+          
+    }
+    &__item:not(:last-child){
+        margin: 0 21px 0 0;
+    }
+    &__link {
+        color:$gray;
+        font-weight: 600;
+        line-height: calc(24/14*100%);
+        @media (max-width:479px) {
+            font-size: 18px;
+        }
+    }
 
+    &__link:hover{
+        text-decoration: underline;
+    }
+}
 /*---------page-----------------------------------------------*/
 
 
 .page {
-
     flex: 1 1 auto;
 
     &__main-block {
@@ -144,7 +145,6 @@ body{
 /*---------header-block--------------------------------------*/
 
 .header-block {
-
     text-align: center;
     letter-spacing: 0.2px;
 
@@ -158,13 +158,11 @@ body{
         @media (max-width:767px) {
             font-size: 30px;
         }
-    
     }
     &__title:not(:last-child){
         margin: 0 0 10px 0;
     }
     
-
     &__sub-title {
         color: $gray;
         line-height: 142%;
@@ -175,8 +173,6 @@ body{
 
 .main-block {
     position: relative;
-
-    // .main-block__body
 
     &__body {
         padding: 184px 0 191px 0;
@@ -195,8 +191,6 @@ body{
         margin: 0 0 35px 0;
     }
 
-    // .main-block__title
-
     &__title {
         font-size: 58px;
         line-height: 137%;
@@ -207,8 +201,6 @@ body{
         }
     }
 
-    // .main-block__text
-
     &__text {
         color: $gray;
         font-size: 20px;
@@ -218,7 +210,6 @@ body{
         }
     }
 
-
     &__buttons {
         display: flex;
         flex-wrap: wrap;
@@ -226,7 +217,6 @@ body{
         
         
     }
-    
     // верстка кнопки 
 
     &__button {
@@ -293,17 +283,14 @@ body{
             object-position: right;
         }
     }
-
 }
 
 /*---------services-------------------------------------------*/
 
 .services {
-    
-
+   
     &__container {
     }
-
 
     &__body {
         @media (min-width:670px) {
@@ -312,7 +299,6 @@ body{
             margin: 0 -15px;
         }
     }
-
 
     &__column {
         
@@ -324,7 +310,6 @@ body{
         @media (max-width:992px) {
             flex: 0 1 50%; 
         }
-
     }
     //посл блок на всю ширину
     &__column:last-child{
@@ -336,9 +321,7 @@ body{
         @media (max-width:992px) {
             margin: 0 0 30px 0;
         }
-        
     }
-
 
     &__item {
         box-shadow: 0px 13px 19px rgba(0, 0, 0, 0.07);
@@ -353,11 +336,8 @@ body{
 
 .item-service {
 
-    // .item-service__icon
-
     &__icon {
     }
-
 
     &__title {
         font-weight: 700;
@@ -365,7 +345,6 @@ body{
         line-height: 133%;
         letter-spacing: 0.1px;
     }
-
 
     &__text {
         color: $gray;
@@ -405,7 +384,6 @@ body{
         
     }
 
-
     &__header {
         margin: 0 0 50px 0;
         @media (max-width:767px) {
@@ -417,8 +395,6 @@ body{
         display: flex;
         margin: 0 -15px -30px;
         flex-wrap: wrap;
-        
-        
     }
 
     &__column {
@@ -431,7 +407,6 @@ body{
         @media (max-width:560px) {
             flex: 0 1 100%;
         }
-        
     }
 
 
@@ -441,7 +416,6 @@ body{
         text-align: center;
         font-weight: 700;
         height: 100%;
-        
     }
     &__item>*:not(:last-child){
         margin-bottom: 10px;
@@ -452,7 +426,6 @@ body{
         display: flex;
         align-items: flex-end;
         justify-content: center;
-
     }
 
 
@@ -464,7 +437,6 @@ body{
 
     &__text {
         color: $gray;
-  
         line-height: 150%;
         letter-spacing: 0.1px;
         font-size: 16px;
@@ -524,13 +496,9 @@ body{
     flex-direction: column;
     height: 100%;
     
-
-
     &__content{
         padding: 30px;
-        
         flex: 1 1 auto;
-        
     }
 
     &__link {
@@ -551,7 +519,6 @@ body{
         line-height: 150%;
     }
 
-
     &__text {
         color: $gray;
         line-height: 142%;
@@ -559,7 +526,6 @@ body{
 
     // 138*230
     //138/230*100 = 60%
-
     &__img {
         display: block;
         padding: 0 0 60% 0;
@@ -588,7 +554,6 @@ body{
         }
     }
 
-
     &__body {
         display: flex;
         align-items: flex-start;
@@ -597,8 +562,6 @@ body{
             align-items: stretch;
         }
     }
-
-
 
     &__video {
         flex: 0 0 57%;
@@ -646,7 +609,6 @@ body{
         }
     }
 
-
     &__title {
         font-weight: 700;
         font-size: 40px;
@@ -674,12 +636,9 @@ body{
         }
     } 
 
-
     &__items {
        
     }
-
-    // .whoweare__item
 
     &__item { 
     }
@@ -697,14 +656,10 @@ body{
         flex: 0 0 32px;
     }
 
-    // .item-whoweare__body
-
     &__body {
         flex: 1 1 auto;
         padding: 0 0 0 20px;
     }
-
-    // .item-whoweare__title
 
     &__title {
         font-weight: 700;
@@ -714,8 +669,6 @@ body{
     &__title:not(:last-child){
         margin: 0 0 5px 0;
     } 
-
-    // .item-whoweare__text
 
     &__text {
         color: $gray;
@@ -736,13 +689,10 @@ body{
     // .clients__container
     @media (max-width:767px) {
         padding: 30px 0;
-
     }
 
     &__container {
     }
-
-    // .clients__items
 
     &__items {
         display: flex;
@@ -750,8 +700,6 @@ body{
         align-items: center;
         justify-content: center;
     }
-
-    // .clients__item
 
     &__item {
         padding: 8 15px;
@@ -770,19 +718,12 @@ body{
     position: relative;
     padding-bottom: 20px;
 
-    // .subscribe__container
-
     &__container {
     }
-
-    // .subscribe__body
 
     &__body {
         position: relative;
         z-index: 10;
-        
-        
-        
         padding: 30px 50px;
         align-items: center;
         background-color: #17213C;
@@ -800,8 +741,6 @@ body{
         }
     }
 
-    // .subscribe__title
-
     &__title {
         
         flex: 0 1 50%;
@@ -818,15 +757,11 @@ body{
         }
     }
 
-    // .subscribe__form
-
     &__form {
         flex: 0 1 50%;
         display: flex;
         align-items: center;
     }
-
-    // .subscribe__input
 
     &__input {
         width: 100%;
@@ -845,8 +780,6 @@ body{
     &__input:focus{
         color: #000;
     }
-
-    // .subscribe__button
 
     &__button {
         background: #FF7B47;
@@ -891,8 +824,6 @@ body{
     &__container {
     }
 
-    // .getintouch__header
-
     &__header {
         margin-bottom: 80px; 
         @media (max-width:992px) {
@@ -903,8 +834,6 @@ body{
         }
     }
 
-    // .getintouch__items
-
     &__items {
         margin: 0 -15px;
 
@@ -914,8 +843,6 @@ body{
             margin: 0;
         }
     }
-
-    // .getintouch__item
 
     &__item {
         flex: 0 1 33.333%;
@@ -929,7 +856,6 @@ body{
     align-items: center;
     background-color: #fff;
     padding: 50px 15px;
-    // .item-getintouch__icon
 
     &__active{
         background: #252B42;
@@ -949,43 +875,30 @@ body{
         background: #ffffff;
     }
 
-
     &__icon {
     }
     
-
-    // .item-getintouch__emails
-
     &__emails {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-
     }
-
-    // .item-getintouch__email
 
     &__email {
         color: inherit;
         font-weight: 600;
         line-height: 150%;
-        
     }
     &__email:hover {
         text-decoration: underline;
-
     }
-
-    // .item-getintouch__label
 
     &__label {
         font-weight: 700;
         font-size: 16px;
         line-height: 150%;
     }
-
-    // .item-getintouch__button
 
     &__button {
         border: 1px solid #FF7B47;
@@ -1004,7 +917,6 @@ body{
     &__button:hover{
         background-color: #FF7B47;
         color: #fff;
-
     }
 }
 .item-getintouch > *:not(:last-child) {
@@ -1018,11 +930,8 @@ body{
     background-color: #fff;
     padding: 42px 0;
 
-
     &__container {
     }
-
-    // .contact__body
 
     &__body {
 
@@ -1033,8 +942,6 @@ body{
         }
     }
 
-    // .contact__content
-
     &__content {
         padding: 0 0 20px 0;
 
@@ -1042,8 +949,6 @@ body{
             padding: 0 20px 0 0;
         }
     }
-
-    // .contact__title
 
     &__title {
         font-weight: 700;
@@ -1059,14 +964,10 @@ body{
         margin: 0 0 10px 0;
     }
 
-    // .contact__text
-
     &__text {
         color: $gray;
         line-height: 142%;
     }
-
-    // .contact__button
 
     &__button {
        display: flex;
@@ -1079,21 +980,16 @@ body{
        text-align: center;
        color: #fff;
        transition: all 0.3s ease 0s ;
-
     }
     &__button:hover{
         background-color: #72331a;
    }
-
-
 }
 
 
 
 /*---------подвал-------------------------------------------*/
 .footer {
-
-    // .footer__top
 
     &__top {
         background-color: #17213C;
@@ -1105,14 +1001,9 @@ body{
         flex-wrap: wrap;
         margin: 0 -15px;
     }
-    // .footer__main
 
-    &__main {
-        
-        
+    &__main { 
     }
-
-    // .footer__column
 
     &__column {
         flex: 0 1 16.6667%;
@@ -1121,25 +1012,16 @@ body{
         @media (max-width:1042px) {
             flex: 0 1 25%; 
         }
-
         @media (max-width:700px) {
             flex: 0 1 50%; 
-        }
-       
+        } 
     }
     &__column:last-child {
         flex: 0 1 33.334%;
         @media (max-width:1042px) {
             flex: 1 1 100%; 
         }
-
-
-       
-        
-       
     }
-
-    // .footer__label
 
     &__label {
         color: #fff;
@@ -1149,23 +1031,15 @@ body{
         margin: 0 0 20px 0;
     }
 
-    // .footer__menu
-
     &__menu {
     }
-
-    // .footer__contacts
 
     &__contacts {
     }
 
-    // .footer__bottom
-
     &__bottom {
         padding: 25px 0;
     }
-
-    // .footer__container
 
     &__container {
         display: flex;
@@ -1177,8 +1051,6 @@ body{
         }
     }
 
-    // .footer__copi
-
     &__copy {
         color: $gray;
         line-height: 171%;
@@ -1188,8 +1060,6 @@ body{
         }
     }
 
-    // .footer__social
-
     &__social {
         display: flex;
         align-items: center;
@@ -1198,29 +1068,22 @@ body{
 
 .menu-footer {
 
-    // .menu-footer__list
-
     &__list {
     }
 
-    // .menu-footer__item
-
     &__item {
 
-
     }
+
     &__item:not(:last-child) {
         margin: 0 0 10px 0;
     }
-
-    // .menu-footer__link
 
     &__link {
         color: #fff;
         letter-spacing: 0.2px;
         line-height: 171%;
         display: inline-block;
-
     }
     &__link:hover{
         text-decoration: underline;
@@ -1229,7 +1092,6 @@ body{
 .contacts-footer {
     display: flex;
     flex-direction: column;
-    // .contacts-footer__item
 
     &__item {
         padding: 0 0 0 34px;
@@ -1239,34 +1101,28 @@ body{
         color: #fff;
         line-height: 142%;
     }
+
     &__item:hover{
         text-decoration: underline;
     }
+
     &__item:not(:last-child) {
         margin: 0 0 12px 0;
     }
-
-    // .contacts-footer__item-phone
 
     &__item-phone {
         background: url("../img/footer/01.svg") 0 0 no-repeat;
     }
 
-    // .contacts-footer__item-map
-
     &__item-map {
         background: url("../img/footer/02.svg") 0 0 no-repeat;
     }
-
-    // .contacts-footer__item-email
 
     &__item-email {
         background: url("../img/footer/03.svg") 0 0 no-repeat;
     }
 }
 .social {
-
-    // .social__item
 
     &__item {
     }
